@@ -4,3 +4,4 @@
 *.lock
 .gradle
 build/
+gradle/wrapper
