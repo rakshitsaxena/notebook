@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_1acd279811d59636659f8c6d20873eb5a056135a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_62e4e5812c8ce736bc601dc6de86ee258b280f79\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_33a016aa93063d1de389a5ad682b7bd05ba123fb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_e6ea0818bde1122abd535ed30ed41ae68a2c93d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_0aaef9655aeb15154ce1183db1422ff73f4ace8b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_d0970ea9a5582989eaf4d3ed8a0df2acfec7ca5d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_0b74ac87e5847336f763ca6b02ba5c7e50c9d9af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_7f132c21e8e7f9eadff8b5d569cb69c6f70405da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="bcec264f37e3f6f8fc6dafd267e9b934424d09fb">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bd19ef2a0929775ba46a6a089826cf0e6012e695\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_2491f0587aa4a941656e6f8e5916026093beba9a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_75a76a81c26bcb9663c6dbdade2e7b56375a5f34\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ad4c2309f7b13513243524c6ac4a709f348c5513">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ecb96d6aa9de68d9bb3265450d182095d04fecae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_2544c86c3f6c62995bcd006b791c5b60c77c1c59\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_47dbb5172bc73712e1a1d14bcee4c45e5dc7ea16\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_ab62ad79fc887625aaedd5157190167497ef8de8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_2009d4f4989473f8d82ffec0c895dfd210490fb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_4237928a5c50e32492bf2db2bad5a696003ca20e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_04f119413c7be07c8fd8fa0b5b3ec030f88f6baf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Rakshit\Projects\android\Notebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_3d5597c27e5e6bce6423ad20d8987d7aa8e61fdb\classes.dex" />
+    </item>
+
+</items>
