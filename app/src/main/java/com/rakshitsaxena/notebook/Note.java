@@ -63,15 +63,15 @@ public class Note {
     public static int categoryToDrawable(Category noteCategory){
         switch (noteCategory){
             case PERSONAL:
-                return R.drawable.P;
+                return R.drawable.p;
             case TECHNICAL:
-                return R.drawable.T;
+                return R.drawable.t;
             case FINANCE:
-                return R.drawable.F;
+                return R.drawable.f;
             case QUOTE:
-                return R.drawable.Q;
+                return R.drawable.q;
         }
 
-        return R.drawable.P;
+        return R.drawable.p;
     }
 }
