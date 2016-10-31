@@ -7,6 +7,7 @@ package com.rakshitsaxena.notebook;
 public class Note {
 
     private String title, message;
+
     private long noteId, dateCreatedMilli;
     private Category category;
 
@@ -44,6 +45,8 @@ public class Note {
     public Category getCategory() {
         return category;
     }
+
+    public long getId() {return noteId;}
 
     @Override
     public String toString() {
