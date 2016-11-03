@@ -17,10 +17,6 @@ import java.util.List;
  */
 public class MainActivityListFragment extends ListFragment {
 
-    public static final String NOTE_ID_EXTRA = "com.rakshitsaxena.notebook.Note Identifier";
-    public static final String NOTE_TITLE_EXTRA = "com.rakshitsaxena.notebook.Note Title";
-    public static final String NOTE_MESSAGE_EXTRA = "com.rakshitsaxena.notebook.Note Message";
-    public static final String NOTE_CATEGORY_EXTRA = "com.rakshitsaxena.notebook.Note Category";
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
@@ -51,10 +47,10 @@ public class MainActivityListFragment extends ListFragment {
 
         Intent intent = new Intent(getActivity(), NoteDetailActivity.class);
 
-        intent.putExtra(NOTE_TITLE_EXTRA, note.getTitle());
-        intent.putExtra(NOTE_ID_EXTRA, note.getId());
-        intent.putExtra(NOTE_MESSAGE_EXTRA, note.getMessage());
-        intent.putExtra(NOTE_CATEGORY_EXTRA, note.getCategory());
+        intent.putExtra(MainActivity.NOTE_TITLE_EXTRA, note.getTitle());
+        intent.putExtra(MainActivity.NOTE_ID_EXTRA, note.getId());
+        intent.putExtra(MainActivity.NOTE_MESSAGE_EXTRA, note.getMessage());
+        intent.putExtra(MainActivity.NOTE_CATEGORY_EXTRA, note.getCategory());
 
         startActivity(intent);
     }
