@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:parentActivityName=".MainActivity"
-            android:label="@string/editFragmentTitle"
+            android:label="@string/edit_fragment_title"
             android:name=".NoteDetailActivity"></activity>
     </application>
 
