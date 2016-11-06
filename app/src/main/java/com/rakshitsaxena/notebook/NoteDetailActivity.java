@@ -1,5 +1,6 @@
 package com.rakshitsaxena.notebook;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -16,13 +17,24 @@ public class NoteDetailActivity extends AppCompatActivity {
     }
 
     private void createAndAddFragment(){
+        Intent intent = getIntent();
+        MainActivity.FragmentToLaunch ftl = (MainActivity.FragmentToLaunch)
+                intent.getSerializableExtra(MainActivity.NOTE_FRAGMENT_TO_LOAD_EXTRA);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-
-        NoteViewFragment noteViewFragment = new NoteViewFragment();
-        setTitle(R.string.view_fragment_title);
-        fragmentTransaction.add(R.id.note_container, noteViewFragment, "NOTE_VIEW_FRAGMENT");
+        switch (ftl){
+            case EDIT:
+                NoteEditFragment noteEditFragment = new NoteEditFragment();
+                setTitle(R.string.edit_fragment_title);
+                fragmentTransaction.add(R.id.note_container, noteEditFragment, "NOTE_EDIT_FRAGMENT");
+                break;
+            case VIEW:
+                NoteViewFragment noteViewFragment = new NoteViewFragment();
+                setTitle(R.string.view_fragment_title);
+                fragmentTransaction.add(R.id.note_container, noteViewFragment, "NOTE_VIEW_FRAGMENT");
+                break;
+        }
 
         fragmentTransaction.commit();
     }

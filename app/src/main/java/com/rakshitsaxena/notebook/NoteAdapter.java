@@ -20,8 +20,6 @@ public class NoteAdapter extends ArrayAdapter<Note>{
         TextView title;
         TextView note;
         ImageView noteIcon;
-
-
     }
 
     public NoteAdapter(Context context, List<Note> notes){
