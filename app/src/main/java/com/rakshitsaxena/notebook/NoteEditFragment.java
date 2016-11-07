@@ -25,6 +25,7 @@ public class NoteEditFragment extends Fragment {
     private ImageButton noteCatButton;
     private Note.Category savedButtonCategory;
     private EditText title, message;
+    private long noteId = 0;
     private AlertDialog categoryDialog, confirmDialog;
 
     public NoteEditFragment() {
@@ -62,6 +63,7 @@ public class NoteEditFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         title.setText(intent.getExtras().getString(MainActivity.NOTE_TITLE_EXTRA , ""));
         message.setText(intent.getExtras().getString(MainActivity.NOTE_MESSAGE_EXTRA, ""));
+        noteId = intent.getExtras().getLong(MainActivity.NOTE_ID_EXTRA, 0);
 
 
         if(savedButtonCategory != null){
@@ -136,6 +138,7 @@ public class NoteEditFragment extends Fragment {
         confirmBuilder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                savedButtonCategory = savedButtonCategory == null? Note.Category.PERSONAL:savedButtonCategory;
                 Log.d("Save Note", "Note Title:" + title.getText() +
                         "Note Message:" + message.getText() +
                         "Note Category" + savedButtonCategory
@@ -145,15 +148,19 @@ public class NoteEditFragment extends Fragment {
                 notebookDbAdapter.open();
                 if(newNote){
                     //if it is a new note then create it our database
-                    notebookDbAdapter.createNote(title.getText().toString(),
-                            message.getText().toString(),
-                            savedButtonCategory == null? Note.Category.PERSONAL:savedButtonCategory);
+                    notebookDbAdapter.createNote(title.getText() + "",
+                            message.getText() + "",
+                            savedButtonCategory
+                            );
                 }
 
                 else {
                     //otheriwse it is an old note so update our db
+                    Log.d("UPDATE_NOTE", "Updating note");
+                    notebookDbAdapter.updateNote(noteId, title.getText() + "",
+                            message.getText() + "", savedButtonCategory);
                 }
-
+                notebookDbAdapter.close();
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
             }

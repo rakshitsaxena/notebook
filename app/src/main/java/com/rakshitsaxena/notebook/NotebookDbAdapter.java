@@ -32,11 +32,11 @@ public class NotebookDbAdapter {
     private String[] allColumns = {ID, TITLE, MESSAGE, CATEGORY, DATE};
 
     public static final String CREATE_TABLE_NOTE = "create table " + NOTE_TABLE +
-                                                " (" + ID + " integer primary key autoincrement, " +
+                                                " ( " + ID + " integer primary key autoincrement, " +
                                                         TITLE + " text not null, " +
                                                         MESSAGE + " text not null, "+
                                                         CATEGORY + " text not null, " +
-                                                        DATE + " text not null );";
+                                                        DATE + " );";
 
     private SQLiteDatabase sqlDB;
     private Context context;
@@ -58,12 +58,12 @@ public class NotebookDbAdapter {
     }
 
     public ArrayList<Note> getAllNotes(){
-        ArrayList<Note> notes = new ArrayList<Note>();
-
+        ArrayList<Note> notes = new ArrayList();
         Cursor cursor = sqlDB.query(NOTE_TABLE, allColumns, null, null, null, null, null);
 
         for(cursor.moveToLast(); !cursor.isBeforeFirst(); cursor.moveToPrevious()){
             Note note = cursorToNote(cursor);
+            Log.d("CALLING_ALL_NOTES", note.getId() + "");
             notes.add(note);
         }
 
@@ -96,6 +96,30 @@ public class NotebookDbAdapter {
         cursor.close();
         return newNote;
 
+    }
+
+    //returns number of rows updated
+    public long updateNote(long idToUpdate, String newTitle, String newMessage,
+                           Note.Category newCategory){
+        ContentValues values = new ContentValues();
+        values.put(TITLE, newTitle);
+        values.put(MESSAGE, newMessage);
+        values.put(CATEGORY, newCategory.name());
+        values.put(DATE, Calendar.getInstance().getTimeInMillis() + "");
+
+        Log.d("UPDATE_NOTE_METHOD", "Updating note with values Id: " + idToUpdate + " Title:" + newTitle +
+                " Message: " + newMessage + " Category: " + newCategory.name());
+
+        int updatedRowCount = sqlDB.update(NOTE_TABLE, values, ID + " = " + idToUpdate, null);
+        Log.d("UPDATE_ROW_COUNT", "Updated row count is : " + updatedRowCount);
+        return  updatedRowCount;
+
+    }
+
+    public long deleteNote(long idToDelete){
+        int deletedRowCount = sqlDB.delete(NOTE_TABLE, ID + " = " + idToDelete, null);
+        Log.d("DELETED_ROW_COUNT", "Deleted row count is : " + deletedRowCount);
+        return  deletedRowCount;
     }
 
     private static class NotebookDbHelper extends SQLiteOpenHelper {
