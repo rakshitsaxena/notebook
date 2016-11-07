@@ -23,17 +23,19 @@ import java.util.List;
 public class MainActivityListFragment extends ListFragment {
 
 
+    ArrayList<Note> notes;
+    NoteAdapter noteAdapter;
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
 
-        List<Note> notes = new ArrayList<>();
-        notes.add(new Note("First Note", "Hello, How are you?", Note.Category.PERSONAL));
-        notes.add(new Note("Second Note", "Hello, I am good", Note.Category.TECHNICAL));
-        notes.add(new Note("Third Note", "Stock quote of the day", Note.Category.QUOTE));
-        notes.add(new Note("Fourtth Note", "Buy Tata Motors", Note.Category.FINANCE));
+        NotebookDbAdapter dbAdapter = new NotebookDbAdapter(getActivity().getBaseContext());
+        dbAdapter.open();
+        notes = dbAdapter.getAllNotes();
+        dbAdapter.close();
 
-        NoteAdapter noteAdapter = new NoteAdapter(getActivity(), notes);
+        noteAdapter = new NoteAdapter(getActivity(), notes);
 
         setListAdapter(noteAdapter);
         registerForContextMenu(getListView());

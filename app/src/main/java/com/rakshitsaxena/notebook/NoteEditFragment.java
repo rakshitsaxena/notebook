@@ -141,6 +141,19 @@ public class NoteEditFragment extends Fragment {
                         "Note Category" + savedButtonCategory
                 );
 
+                NotebookDbAdapter notebookDbAdapter = new NotebookDbAdapter(getActivity().getBaseContext());
+                notebookDbAdapter.open();
+                if(newNote){
+                    //if it is a new note then create it our database
+                    notebookDbAdapter.createNote(title.getText().toString(),
+                            message.getText().toString(),
+                            savedButtonCategory == null? Note.Category.PERSONAL:savedButtonCategory);
+                }
+
+                else {
+                    //otheriwse it is an old note so update our db
+                }
+
                 Intent intent = new Intent(getActivity(), MainActivity.class);
                 startActivity(intent);
             }
