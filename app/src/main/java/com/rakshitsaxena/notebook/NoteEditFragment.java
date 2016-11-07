@@ -21,6 +21,7 @@ import android.widget.ImageButton;
 public class NoteEditFragment extends Fragment {
 
     private static final String MODIFIED_CATEGORY = "Modified Category";
+    private boolean newNote = false;
     private ImageButton noteCatButton;
     private Note.Category savedButtonCategory;
     private EditText title, message;
@@ -35,6 +36,11 @@ public class NoteEditFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        //to check if NoteEditFrag is used for new note
+        Bundle bundle = this.getArguments();
+        if(bundle != null){
+            newNote = bundle.getBoolean(NoteDetailActivity.NEW_NOTE_EXTRA, false);
+        }
         if(savedInstanceState != null){
             savedButtonCategory = (Note.Category)savedInstanceState.get(MODIFIED_CATEGORY);
         }
@@ -54,13 +60,13 @@ public class NoteEditFragment extends Fragment {
         });
 
         Intent intent = getActivity().getIntent();
-        title.setText(intent.getExtras().getString(MainActivity.NOTE_TITLE_EXTRA));
-        message.setText(intent.getExtras().getString(MainActivity.NOTE_MESSAGE_EXTRA));
+        title.setText(intent.getExtras().getString(MainActivity.NOTE_TITLE_EXTRA , ""));
+        message.setText(intent.getExtras().getString(MainActivity.NOTE_MESSAGE_EXTRA, ""));
 
 
         if(savedButtonCategory != null){
             noteCatButton.setImageResource(Note.categoryToDrawable((savedButtonCategory)));
-        } else {
+        } else if(!newNote) {
             Note.Category noteCat = (Note.Category) intent.getSerializableExtra(MainActivity.NOTE_CATEGORY_EXTRA);
             savedButtonCategory = noteCat;
             noteCatButton.setImageResource(Note.categoryToDrawable(noteCat));
