@@ -1,14 +1,15 @@
 package com.rakshitsaxena.notebook;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        loadPReferences();
 
     }
 
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, AppPreferences.class);
+            startActivity(intent);
             return true;
         } else if(id ==R.id.action_add_note){
             Intent intent = new Intent(this, NoteDetailActivity.class);
@@ -53,5 +57,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void loadPReferences(){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        boolean isBackgroundDark = sharedPreferences.getBoolean("background_color", false);
+        if(isBackgroundDark){
+            LinearLayout mainLayout = (LinearLayout)findViewById(R.id.main_activity_layout);
+            mainLayout.setBackgroundColor(Color.parseColor("#3c3f41"));
+        }
+
+        String notebookTitle = sharedPreferences.getString("title", "Notebook");
+        setTitle(notebookTitle);
+
     }
 }
